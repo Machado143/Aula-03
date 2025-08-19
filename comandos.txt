@@ -1,3 +1,24 @@
 pip install -r requirements.txt
 django-admin startproject aula03 .
 python manage.py startapp Farmacia
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git add .
+git commit -m "Descrição das mudanças"
+git push
