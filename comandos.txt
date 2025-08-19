@@ -1,0 +1,3 @@
+pip install -r requirements.txt
+django-admin startproject aula03 .
+python manage.py startapp Farmacia
