@@ -7,6 +7,8 @@ class Medicamento(models.Model):
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     estoque = models.IntegerField()
 
+    def __str__(self):
+        return self.nome
 
 
 class Cliente(models.Model):
@@ -21,6 +23,8 @@ class Cliente(models.Model):
         through_fields=('cliente', 'medicamento'),
     )
 
+    def __str__(self):
+        return self.nome
 
 
 class ClienteMedicamento(models.Model):
@@ -33,3 +37,5 @@ class ClienteMedicamento(models.Model):
         on_delete=models.CASCADE,
     )
 
+    def __str__(self):
+        return f"{self.cliente.nome} - {self.medicamento.nome}"
